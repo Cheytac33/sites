@@ -1,0 +1,27 @@
+/* 992px - 1200px */
+@media screen and (max-width: 1200px) {
+  .content .servises .about .assistance .footer .navbar {
+    margin: 0 70px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+  .content__image {
+    margin: 0 auto;
+    max-width: 80%;
+    margin-top: 30px;
+  }
+}
+
+/* 768px - 992px*/
+@media screen and (max-width: 992px) {
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+}
+
+/* 320px - 576px */
+@media screen and (max-width: 576px) {
+}
