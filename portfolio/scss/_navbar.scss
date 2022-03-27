@@ -1,0 +1,173 @@
+// nm
+nav {
+  overflow: hidden;
+
+  &.fixed__nav {
+    background: green;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 111;
+  }
+  .navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+
+    .menu {
+      display: block;
+    }
+    .logo {
+      z-index: 1;
+    }
+    .menu__list {
+      display: flex;
+      z-index: 1;
+      &-item {
+        margin-right: 25px;
+        position: relative;
+        &:hover {
+          &:after {
+            width: 100%;
+            transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.3s all;
+          }
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 1px;
+          width: 0;
+          background: #ffffff;
+        }
+        a {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+
+          color: #ffffff;
+        }
+        :last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    .burger {
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+  }
+ }
+
+  // Тут указываем тот Брейкпоинт, на котором нам нужно прятать      обычное меню и показывать уже бургер
+  // Так же это значение ставим в файле navbar.js
+  @media screen and (max-width: 768px) {
+  .menu {
+    &.active {
+      left: 0;
+
+    }
+
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 100px 30px 30px 30px;
+    transition: left 0.3s ease 0s;
+
+    &__list {
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        margin: 0 0 30px 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .burger {
+
+    margin-bottom: 5px;
+
+    position: relative;
+    height: 23px;
+    width: 30px;
+    z-index: 182;
+    cursor: pointer;
+    span,
+    &:before,
+    &:after {
+      position: absolute;
+      left: 0;
+      height: 3px;
+      width: 30px;
+      transition: all 0.3s ease 0s;
+      background-color: #fff;
+    }
+    &.active{
+      span{
+        transform: scale(0) translate(0,-50%);
+      }
+
+      &:before{
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+      }
+
+      &:after{
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+      }
+
+    }
+    &:before,
+    &:after {
+      content: "";
+    }
+
+    &:before {
+      top: 0px;
+    }
+    &:after {
+      bottom: 0px;
+    }
+
+    span{
+      top: 50%;
+      transform: scale(1) translate(0,-50%);
+    }
+
+
+    // &.active-burger {
+    //   &:before {
+
+    //     background: #ffffff;
+    //     transform: rotate(45deg);
+    //     transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+    //     top: 8px;
+    //   }
+    //   &:after {
+    //     background: #fff;
+    //     transform: rotate(-45deg);
+    //     bottom: 10px;
+    //     transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+    //   }
+    //   & span {
+    //     transform: scale(0);
+    //   }
+    // }
+  }
+}

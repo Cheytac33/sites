@@ -1,0 +1,94 @@
+header {
+  .header {
+    @media (max-width: 992px) {
+      flex-wrap: wrap-reverse;
+    }
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    &__item {
+      @media (max-width: 992px) {
+        flex: 0 0 100%;
+      }
+      &.canvas__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 992px) {
+          margin-top: 25px;
+        }
+        @media (max-width: 768px) {
+          canvas {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+      flex: 0 0 50%;
+
+      .title {
+        padding-top: 150px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 78px;
+        line-height: 116%;
+
+        color: #ffffff;
+        @media (max-width: 992px) {
+          padding-top: 25px;
+          text-align: center;
+          font-size: 62px;
+        }
+        @media (max-width: 768px) {
+          font-size: 36px;
+          line-height: 42px;
+        }
+      }
+      .subtitle {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 137%;
+        padding-top: 24px;
+        margin-bottom: 10px;
+        color: #ffffff;
+        @media (max-width: 992px) {
+          padding-top: 25px;
+          text-align: center;
+          font-size: 26px;
+        }
+        @media (max-width: 768px) {
+          font-size: 22px;
+          line-height: 32px;
+        }
+      }
+      .info {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        gap: 20px;
+        max-width: 411px;
+        width: 100%;
+        @media (max-width: 992px) {
+          max-width: 100%;
+          justify-content: center;
+        }
+        @media (max-width: 768px) {
+          margin-top: 0;
+        }
+        &__item {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 21px;
+          line-height: 150%;
+
+          color: #ffffff;
+          background: #1378ef;
+          border-radius: 64px;
+          padding: 2px 16px;
+        }
+      }
+    }
+  }
+}

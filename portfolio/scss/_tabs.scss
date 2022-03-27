@@ -1,0 +1,90 @@
+.tabs {
+  width: 100%;
+  margin-top: 40px;
+  @media (max-width: 768px) {
+margin: 25px 0;
+    }
+  &__header {
+    flex-wrap: wrap;
+    display: flex;
+ @media (max-width: 768px) {
+        justify-content: center;
+
+    }
+    &-item {
+      margin: 30px 20px 0 20px;
+
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 150%;
+
+      color: rgba(255, 255, 255, 0.59);
+       @media (max-width: 768px) {
+        margin: 10px;
+        line-height: 100%;
+    }
+      &:hover {
+        color: #fff;
+        transition: 0.3s all ease;
+      }
+      &.active {
+        color: #fff;
+      }
+    }
+  }
+  &__content {
+    z-index: 1;
+    position: relative;
+
+    &-item {
+
+        @media (max-width: 768px) {
+      flex-direction: column;
+    }
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      opacity: 0;
+      transition: 0.3s all ease;
+      width: 100%;
+      display: flex;
+      .tab__content {
+
+        &.left__content {
+                @media (max-width: 768px) {
+     text-align: center;
+     max-width: 100%;
+    }
+          max-width: 430px;
+          width: 100%;
+          .tab__title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 55px;
+
+            color: #ffffff;
+          }
+        }
+        &.right__content {
+          width: 100%;
+
+        }
+      }
+    }
+    &-item.active {
+      position: relative;
+      opacity: 1;
+      z-index: 10;
+    }
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+    @media (max-width: 768px) {
+       margin-top: 25px;
+    }
+  }
+}
