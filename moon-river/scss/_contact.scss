@@ -1,0 +1,123 @@
+.section__contact {
+  .contact {
+    display: flex;
+    background: url(../img/contact__img.jpg) 0 0 / contain no-repeat;
+
+    @media (max-width: 1300px) {
+      background-color: #11978e;
+    }
+    @media (max-width: 850px) {
+         background: url(../img/contact__img.jpg) 50% / cover no-repeat;
+}
+
+    &__form {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 180px;
+      padding-left: 60%;
+      @media (max-width: 1300px) {
+        padding-left: 55%;
+        max-width: 100%;
+        background-color: rgba(75, 74, 74, 0.5);
+      }
+      @media (max-width: 1000px) {
+        padding-left: 0;
+        align-items: center;
+      }
+
+      h4 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+         @media (max-width: 410px) {
+       font-size: 14px;
+      }
+      }
+      .phone {
+        width: 339px;
+        padding: 5px 5px;
+          @media (max-width: 1000px) {
+      background-color: rgba(145, 145, 145, 0.5);
+      backdrop-filter: blur(5px);
+       border-radius:  5px 5px 0 0;
+      padding: 30px;
+      padding-bottom: 0;
+      width: 400px;
+        height: 200px;
+      }
+        @media (max-width: 410px) {
+      width: 100%;
+      padding: 30px 0 0 1px;
+       height: 150px;
+
+      }
+        p {
+          margin-bottom: 110px;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 22px;
+          line-height: 28px;
+          display: flex;
+          align-items: center;
+          color: #252525;
+
+        }
+      }
+      .input {
+
+        width: 339px;
+         padding: 5px 5px;
+          @media (max-width: 1000px) {
+      background-color: rgba(145, 145, 145, 0.5);
+      backdrop-filter: blur(5px);
+      border-radius: 0 0 5px 5px;
+      padding: 30px;
+      padding-top: 0;
+      width: 400px;
+      height: 200px;
+      margin-bottom: 180px;
+      }
+      @media (max-width: 410px) {
+      width: 100%;
+      padding: 30px 0 0 1px;
+        height: 150px;
+      }
+
+        input {
+          width: 280px;
+
+          background: none;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #272727;
+          padding: 5px 0;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 170%;
+
+          color: #272727;
+          &::placeholder {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 28px;
+            display: flex;
+            align-items: center;
+
+            color: #353535;
+          }
+        }
+      }
+    }
+  }
+}
