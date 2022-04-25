@@ -1,0 +1,79 @@
+.section__chapters {
+  margin-bottom: 20px;
+
+  .chapter {
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    justify-content: center;
+    gap: 20px;
+    display: flex;
+
+    .block {
+      @media (max-width: 768px) {
+        height: 50vw;
+      }
+
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 587px;
+      &__title {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        &::after {
+          content: ("");
+
+          width: 130px;
+          border: 1px solid #ffffff;
+        }
+        @media (max-width: 500px) {
+          font-size: 50px;
+          line-height: 60px;
+        }
+        font-style: normal;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 71px;
+        /* identical to box height */
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.03em;
+
+        color: #ffffff;
+      }
+      &__subtitle {
+        @media (max-width: 500px) {
+          font-size: 18px;
+          line-height: 28px;
+        }
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 31px;
+        /* identical to box height */
+
+        display: flex;
+        align-items: center;
+        text-align: right;
+
+        color: #ffffff;
+      }
+    }
+    .man {
+      
+      background: url(../img/man.png) 50% / cover no-repeat;
+    }
+    .woman {
+      background: url(../img/woman.png) 50% / cover no-repeat;
+    }
+  }
+}
